@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pi_Calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int denom = 3;
+            double Pi = 4;
+            int c = 3;
+            
+            while (denom <= 1000000)
+            {
+                if (c % 2 != 0)
+                {
+                    Pi -= Convert.ToDouble(4) / denom;
+                    c++;      
+                }
+                else
+                {
+                    Pi += Convert.ToDouble(4) / denom;
+                    c++;
+                }
+                denom += 2;
+                Console.WriteLine(Pi);
+            }
+            Console.WriteLine("To close press enter");
+            Console.ReadLine();  
+
+
+        }
+    }
+}
