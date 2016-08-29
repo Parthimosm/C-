@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please type 1 for Subtraction, 2 for Addition, 3 for Division and four for Multiplacation: ");
+
+            string oper = Console.ReadLine();
+            int operation = int.Parse(oper);
+
+            Console.WriteLine("Please input first number: ");
+
+            string numA = Console.ReadLine();
+            int num1 = int.Parse(numA);
+
+            Console.WriteLine("Please input second number; ");
+
+            string numB = Console.ReadLine();
+            int num2 = int.Parse(numB);
+
+            int answere = 0;  
+
+            if (operation == 1){
+                answere = num1 - num2; 
+            } else if(operation == 2){
+                answere = num1 + num2;
+            } else if(operation == 3)
+            {
+                answere = num1 / num2; 
+            } else if(operation == 4)
+            {
+                answere = num1 * num2; 
+            } else if (operation > 4)
+            {
+                Console.WriteLine("You have not entered a number from 1 to 4");
+            }
+
+            Console.WriteLine(answere);
+
+            Console.WriteLine("To close press any key");
+
+            string close = Console.ReadLine(); 
+
+
+        }
+    }
+}
